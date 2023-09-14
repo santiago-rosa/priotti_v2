@@ -1,0 +1,61 @@
+[23-May-2023 15:02:18 America/New_York] Enviando mail a santiagorrosa@gmail.com
+[23-May-2023 15:02:19 America/New_York] 1
+[24-May-2023 17:18:50 America/New_York] Enviando mail a santiagorrosa@gmail.com
+[24-May-2023 17:18:51 America/New_York] 1
+[25-May-2023 13:22:11 America/New_York] Enviando mail a santiagorrosa@gmail.com
+[25-May-2023 13:22:11 America/New_York] 1
+[25-May-2023 13:26:52 America/New_York] Enviando mail a santiagorrosa@gmail.com
+[25-May-2023 13:26:53 America/New_York] 1
+[25-May-2023 13:43:37 America/New_York] Enviando mail a santiagorrosa@gmail.com
+[25-May-2023 13:44:37 America/New_York] Enviando mail a santiagorrosa@gmail.com
+[25-May-2023 14:12:51 America/New_York] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/felipepr/public_html/Utils/email.php on line 51
+[25-May-2023 14:13:34 America/New_York] Pedido de Cliente numero: pc - Priotti Celular
+[25-May-2023 14:15:42 America/New_York] Pedido de Cliente numero: pc - Priotti Celular
+[25-May-2023 14:15:42 America/New_York] Mail con datos: santiagorrosa@gmail.com -- Pedido de Cliente numero: pc - Priotti Celular -- <strong>Comentarios:</strong> prueba 7
+<br><br><table width='100%' cellspacing ='2' cellpadding='0' border='0' align='center' bgcolor='#999999'><thead><tr><th>Codigo</th><th>Marca</th><th>Cantidad</th></tr></thead><tr bgcolor='#ffffff'><td align='center'>AF124-C</td><td align='center'>AUSILI</td><td align='center'>6</td></tr><tfoot><tr><th>Codigo</th><th>Marca</th><th>Cantidad</th></tr></tfoot><table> -- From: Carrito de Compras 
+MIME-Version: 1.0
+Content-Type: text/html; charset=ISO-8859-1
+
+[25-May-2023 14:18:56 America/New_York] Pedido de Cliente numero: pc - Priotti Celular
+[25-May-2023 14:18:56 America/New_York] Mail con datos: santiagorrosa@gmail.com -- Pedido de Cliente numero: pc - Priotti Celular -- <strong>Comentarios:</strong> prueba 7<br><br> -- From: Carrito de Compras 
+MIME-Version: 1.0
+Content-Type: text/html; charset=ISO-8859-1
+
+[25-May-2023 14:18:56 America/New_York] Mail enviado: mail(santiagorrosa@gmail.com, Pedido de Cliente numero: pc - Priotti Celular, <strong>Comentarios:</strong> prueba 7<br><br>, From: Carrito de Compras 
+MIME-Version: 1.0
+Content-Type: text/html; charset=ISO-8859-1
+)
+[25-May-2023 14:20:29 America/New_York] Pedido de Cliente numero: pc - Priotti Celular
+[25-May-2023 14:20:29 America/New_York] Mail con datos: santiagorrosa@gmail.com -- Pedido de Cliente numero: pc - Priotti Celular -- <strong>Comentarios:</strong> prueba 8<br><br> -- From: Carrito de Compras 
+MIME-Version: 1.0
+Content-Type: text/html; charset=ISO-8859-1
+
+[25-May-2023 14:20:30 America/New_York] Mail enviado: 1
+[07-Aug-2023 15:02:46 America/New_York] PHP Fatal error:  Uncaught Error: Class 'DAOPedidos' not found in /home/felipepr/public_html/Utils/email.php:90
+Stack trace:
+#0 /home/felipepr/public_html/Utils/email.php(17): Email::sendEmail()
+#1 /home/felipepr/public_html/Utils/email.php(117): Email::selector('1')
+#2 {main}
+  thrown in /home/felipepr/public_html/Utils/email.php on line 90
+[07-Aug-2023 15:07:00 America/New_York] PHP Fatal error:  Uncaught Error: Class 'DAOPedidos' not found in /home/felipepr/public_html/Utils/email.php:88
+Stack trace:
+#0 /home/felipepr/public_html/Utils/email.php(17): Email::sendEmail()
+#1 /home/felipepr/public_html/Utils/email.php(117): Email::selector('1')
+#2 {main}
+  thrown in /home/felipepr/public_html/Utils/email.php on line 88
+[07-Aug-2023 15:09:19 America/New_York] PHP Warning:  A non-numeric value encountered in /home/felipepr/public_html/Utils/email.php on line 90
+[07-Aug-2023 15:09:19 America/New_York] PHP Warning:  A non-numeric value encountered in /home/felipepr/public_html/Utils/email.php on line 90
+[07-Aug-2023 15:09:19 America/New_York] 0
+[07-Aug-2023 15:12:04 America/New_York] Error al enviar pedido con nuevo metodo
+[07-Aug-2023 15:14:49 America/New_York] Error al enviar pedido con nuevo metodo
+[07-Aug-2023 15:17:34 America/New_York] Error al enviar pedido con nuevo metodo
+[07-Aug-2023 15:17:34 America/New_York] Mail to be sent: <strong>Comentarios:</strong>  Agregue aquí sus aclaraciones (transporte, etc)<br><br>
+[07-Aug-2023 15:20:19 America/New_York] Error al enviar pedido con nuevo metodo: SMTP Error: Could not connect to SMTP host.
+[07-Aug-2023 15:20:19 America/New_York] PHP Fatal error:  Uncaught Error: Object of class PHPMailer\PHPMailer\PHPMailer could not be converted to string in /home/felipepr/public_html/Utils/email.php:104
+Stack trace:
+#0 /home/felipepr/public_html/Utils/email.php(17): Email::sendEmail()
+#1 /home/felipepr/public_html/Utils/email.php(115): Email::selector('1')
+#2 {main}
+  thrown in /home/felipepr/public_html/Utils/email.php on line 104
+[07-Aug-2023 15:30:19 America/New_York] Error al enviar pedido con nuevo metodo: SMTP Error: Could not connect to SMTP host.
+[07-Aug-2023 15:41:52 America/New_York] Error al enviar pedido con nuevo metodo: SMTP Error: Could not connect to SMTP host.

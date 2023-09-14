@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Felipe Priotti S.A.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Resources/css/bootstrapv4.css">
+    <link rel="stylesheet" href="../Resources/css/estilo.css">
+    <link rel="stylesheet" href="../Resources/css/toastr.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    <script type="text/javascript" src="../Resources/scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../Resources/scripts/popper.js"></script>
+    <script type="text/javascript" src="../Resources/scripts/bootstrapv4.js"></script>
+    <script type="text/javascript" src="../Resources/scripts/indexadmin.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" src="../Resources/scripts/toastr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+</head>
+
+<body>
+
+    <div class="ppal">
+
+        <nav class="navbar navbar-expand-md navbar-custom">
+            <a class="navbar-brand admin" href="#">FP Admin</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars blanco"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li>
+                        <p class="nav-link opciones oculto" id="productos">Productos</p>
+                    </li>
+                    <li>
+                        <p class="nav-link opciones oculto" id="clientes">Clientes</p>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 oculto" id="datosingreso">
+                    <input class="form-control mr-sm-2 fino" type="text" placeholder="usuario" name="usuario" id="usuario">
+                    <input class="form-control mr-sm-2 fino" type="password" placeholder="clave" name="clave" id="clave">
+                    <button class="btn btn-info my-3 my-sm-0" type="submit" id="entrar">Entrar</button>
+                </form>
+                <div id="datossesion" class="oculto form-inline">
+                    <p class="blanco" id="nombreusuario"></p>
+                    <i class="fa fa-sign-out fa-2x blanco" id="salir" aria-hidden="true"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4 blanco" id="titulo">Módulo Administrador</h1>
+                <h2 class="display-4 blanco" id="subtitulo"></h2>
+                <div id="botonesprod" class="oculto">
+                    <a id="btodos" class="btn btn-primary btn-md" href="#" role="button">Todos »</a>
+                    <a id="bofertas" class="btn btn-primary btn-md" href="#" role="button">Ofertas »</a>
+                    <a id="bnovedades" class="btn btn-primary btn-md" href="#" role="button">Novedades »</a>
+                    <a id="bimportador" class="btn btn-warning btn-md" href="#" role="button">Importar »</a>
+                    <a id="bdescargarlista" class="btn btn-warning btn-md" href="#" role="button">Exportar Lista »</a>
+                </div>
+            </div>
+            </p>
+        </div>
+
+        <div class="container oculto max50" id="importador">
+            <h4>Importar Lista y Ofertas</h4>
+            <p id="msg">Cargar archivos</p>
+            <input type="file" id="file" name="file" />
+            <button class="btn btn-info" id="upload">Subir</button>
+            <br>
+            <div class="form-inline">
+                <div class="margin5">
+                    <button class="btn btn-danger margin5" id="importarlista">Actualizar Todo</button>
+                    <br> Última vez:
+                    <p id="ultimalista"></p>
+                </div>
+                <div>
+                    <button class="btn btn-danger margin5" id="importarofertas">Actualizar Ofertas</button>
+                    <br> Última vez:
+                    <p id="ultimaoferta"></p>
+                </div>
+            </div>
+            <div id="msjprocesando" class="oculto">                
+                <i class="fa fa-cog fa-3x fa-spin" aria-hidden="true"></i>
+                <p>Procesando...</p>
+            </div>
+
+        </div>
+
+        <div class="oculto" id="tablaproductos">
+
+            <div class="busqueda form-inline">
+                <input class="form-control" placeholder="Buscar..." type="text" id="buscador">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" class="toggle-vis" data-column="8">Fotos</label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" class="toggle-vis" data-column="1" checked>Aplicación</label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" class="toggle-vis" data-column="2" checked>Marca</label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" class="toggle-vis" data-column="3" checked>Rubro</label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" class="toggle-vis" data-column="4">Equivalencias</label>
+                </div>
+            </div>
+            <br>
+            <div class="form-check-inline">
+                <div class="form-check-label" id="opcioneditprod">
+                    <input type="checkbox" class="form-check-input" id="checkeditprod"> Editable
+                </div>
+            </div>
+
+            <table id="tabla" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Aplicación</th>
+                        <th>Marca</th>
+                        <th>Rubro</th>
+                        <th>Equilavencias</th>
+                        <th>Precio</th>
+                        <th>Oferta</th>
+                        <th>Neto</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Aplicación</th>
+                        <th>Marca</th>
+                        <th>Rubro</th>
+                        <th>Equilavencias</th>
+                        <th>Precio</th>
+                        <th>Oferta</th>
+                        <th>Neto</th>
+                        <th>Foto</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+
+        <div class="oculto" id="tablaclientes">
+
+            <div class="busqueda form-inline">
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id="checkeditcli"> Editar
+                    </label>
+                </div>
+                <a id="bnuevocliente" class="btn btn-info btn-md oculto derecha" href="#" role="button">Nuevo Cliente</a>
+            </div>
+
+            <table id="tablac" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Nº cliente</th>
+                        <th>Cuit</th>
+                        <th>Email</th>
+                        <th>Coeficiente</th>
+                        <th>Último login</th>
+                        <th>Visitas</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Nº cliente</th>
+                        <th>Cuit</th>
+                        <th>Email</th>
+                        <th>Coeficiente</th>
+                        <th>Último login</th>
+                        <th>Visitas</th>
+                        <th>Estado</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <footer>
+            <p>Felipe Priotti S.A. 2018</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
