@@ -74,7 +74,7 @@ class Email
         return "El carrito está vacío!";
     }
 
-    //$password = 'L9fA2@J=x4Sl';
+    
 
     public static function sendEmail()
     {
@@ -82,7 +82,7 @@ class Email
         $mail = new PHPMailer(true); // Enable exceptions
         $host = 'mail.felipepriotti.com.ar';
         $username = 'contacto@felipepriotti.com.ar';
-        $password = 'L9fA2@J=x4Sl';
+        //$password = 
         $port = 465;
         //$to = "contacto@felipepriotti.com.ar";
         $to = "santiagorrosa@gmail.com";
@@ -139,7 +139,7 @@ class Email
             $mail->Host = 'mail.felipepriotti.com.ar'; // Set the SMTP server to send through
             $mail->SMTPAuth = true; // Enable SMTP authentication
             $mail->Username = 'contacto@felipepriotti.com.ar'; // SMTP username
-            $mail->Password = 'L9fA2@J=x4Sl'; // SMTP password
+            //$mail->Password = // SMTP password
             $mail->SMTPSecure = 'ssl'; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
             $mail->Port = 465; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
             // Recipients
