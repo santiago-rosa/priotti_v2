@@ -11,16 +11,6 @@ class Conexion {
         $pass = "Tato1432";
         $server = "127.0.0.1";
         $db = "priotti";*/
-
-        /*$user = "id2833154_santiagorrosa";
-        $pass = "Tato1432";
-        $server = "localhost";
-        $db = "id2833154_priotti";*/
-
-        $user = "felipepr_spauser";
-        $pass = "mariorosa1432";
-        $server = "localhost";
-        $db = "felipepr_wbsiteapp";
         //Comentario
     
         self::$mysqli = new mysqli($server, $user, $pass, $db);
